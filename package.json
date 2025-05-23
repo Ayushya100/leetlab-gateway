@@ -1,0 +1,49 @@
+{
+  "name": "leetlab-gateway",
+  "version": "1.0.0",
+  "description": "Welcome to the GitHub repository for **API Gateway** – This gateway acts as the central access point for all user-facing API requests in our platform. It efficiently routes incoming requests to the appropriate microservices, including **accounts-svc**, **problems-svc**, and **submission-svc**. The gateway also enforces authentication, authorization, rate limiting, and request validation to ensure a secure and scalable system.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js",
+    "start-appmap": "npx appmap-node nodemon src/index.js",
+    "start": "nodemon -r dotenv/config --experimental-json-modules src/index.js",
+    "format": "prettier --write \"src/**/*.js\"",
+    "format:check": "prettier --check \"src/**/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ayushya100/leetlab-gateway.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "javascript",
+    "leetlab-gateway",
+    "accounts-svc",
+    "problems-svc",
+    "submissions-svc"
+  ],
+  "author": "Ayushya Jaiswal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ayushya100/leetlab-gateway/issues"
+  },
+  "homepage": "https://github.com/Ayushya100/leetlab-gateway#readme",
+  "devDependencies": {
+    "appmap-node": "^2.24.3",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.5.3"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "form-data": "^4.0.2",
+    "nodemailer": "^7.0.3"
+  }
+}
